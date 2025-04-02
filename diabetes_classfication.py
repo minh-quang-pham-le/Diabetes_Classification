@@ -14,7 +14,7 @@ from sklearn.metrics import classification_report
 data = pd.read_csv('diabetes.csv')
 
 # profile = ProfileReport(data, title = "Diabetes Report", explorative=True)
-# profile.to_file("diabetes.html")
+# profile.to_file("statistics.html")
 
 target = "Outcome"
 x = data.drop(target, axis = 1)
