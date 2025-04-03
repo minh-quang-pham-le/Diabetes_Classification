@@ -11,6 +11,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import classification_report,recall_score, precision_score
 from sklearn.model_selection import GridSearchCV
 from lazypredict.Supervised import LazyClassifier
+import pickle
 
 # Step 2: Statistics
 data = pd.read_csv('diabetes.csv')
@@ -118,3 +119,7 @@ for name, model in models.items():
 results_df = pd.DataFrame(results)
 print("Results after GridSearchCV:\n")
 print(results_df.sort_values(by = ['Recall'], ascending = False))
+
+# Step 7: Save the model
+with open("model.pkl", "wb") as file:
+    pickle.dump(best_model, file)
