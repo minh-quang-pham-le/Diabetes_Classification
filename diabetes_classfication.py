@@ -118,8 +118,7 @@ for name, model in models.items():
 
 results_df = pd.DataFrame(results)
 print("Results after GridSearchCV:\n")
-print(results_df.sort_values(by = ['Recall'], ascending = False))
 
-# Step 7: Save the model
-with open("model.pkl", "wb") as file:
-    pickle.dump(best_model, file)
+# Step 6: Save the model
+# with open("model.pkl", "wb") as file:
+#     pickle.dump(best_model, file)
